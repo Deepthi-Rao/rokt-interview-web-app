@@ -1,0 +1,56 @@
+.image-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+  .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    .caption-content {
+      color: #fff;
+      margin: auto 2rem 2rem;
+
+      h2, .image-item .caption .caption-content .h2 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+
+    
+    }
+  }
+}
+.image-item:hover img {
+  -webkit-clip-path: inset(1rem);
+          clip-path: inset(1rem);
+}
+.image-item:hover .caption {
+  -webkit-clip-path: inset(1rem);
+          clip-path: inset(1rem);
+}
+img {
+  transition: -webkit-clip-path 0.25s ease-out;
+  transition: clip-path 0.25s ease-out;
+  transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
+  -webkit-clip-path: inset(-1px);
+          clip-path: inset(-1px);
+  width: 220px; /* You can set the dimensions to whatever you want */
+  height: 260px;
+  object-fit: cover;
+}
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+}
+a:hover {
+  text-decoration: underline;
+}

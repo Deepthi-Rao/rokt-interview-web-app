@@ -1,0 +1,50 @@
+<div class="pagination-container" *ngIf="(pexelService.images$ | async) as pagination else loading">
+    <div> 
+        <button 
+        type="button" 
+        class="btn btn-outline-secondary" 
+        [style.display]="!pagination.prev_page ? 'none' : 'block'"
+        (click)="paginate(pagination.prev_page)">
+            Previous
+        </button>
+    </div>
+   
+    <div class="text">
+        Page {{pexelService.page}} of {{pagination.total_results % 10 === 0 ? pagination.total_results/10 : ((pagination.total_results/10) + 1).toFixed(0) }}
+    </div>
+    <div>
+        <button type="button" 
+            class="btn btn-outline-secondary" 
+            (click)="paginate(pagination.next_page)" 
+            [style.display]="!pagination.next_page ? 'none' : 'block'">
+            Next
+        </button>
+    </div>
+    
+</div>
+<ng-template #loading>
+    <div class="pagination-container">
+        <div> 
+            <button 
+            type="button" 
+            class="btn btn-outline-secondary" 
+            [disabled]="true"
+            >
+                Previous
+            </button>
+        </div>
+       
+        <div></div>
+        <div>
+            <button 
+                type="button" 
+                class="btn btn-outline-secondary" 
+                [disabled]="true">
+                Next
+            </button>
+        </div>
+        
+    </div>
+</ng-template>
+
+

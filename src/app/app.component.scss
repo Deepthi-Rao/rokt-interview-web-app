@@ -1,0 +1,20 @@
+.page-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50px 50px 1fr;
+    padding-top: 30px;
+    .search {
+        grid-row: 1;
+    }
+    .paginator {
+        grid-row: 2;
+    }
+    .images {
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        width:100%;
+        margin-left: -15px;
+    }
+}

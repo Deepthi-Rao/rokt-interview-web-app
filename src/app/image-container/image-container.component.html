@@ -1,0 +1,9 @@
+
+<div class="image-container" *ngIf="(pexelService.images$ | async) as pagination">
+    <div *ngIf="!pagination.photos || !pagination.photos.length" style="margin:auto; width: 150px; color:gray;">No results available.</div>
+    <div *ngFor="let photo of pagination.photos">
+        <app-image [image]="photo"></app-image>
+    </div>
+</div>
+
+

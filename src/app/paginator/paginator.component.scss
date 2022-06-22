@@ -1,0 +1,17 @@
+.pagination-container {
+    display: flex;
+    align-self: flex-end;
+    margin-left:20px;
+    margin-right:30px;
+    justify-content: space-between;
+
+
+}
+button {
+    border-radius: 1.625rem;
+}
+.text {
+    color: gray;
+    margin-top: 20px;
+    font-size: 12px;
+}
