@@ -13,7 +13,6 @@ export class PaginatorComponent implements OnInit {
   ngOnInit(): void {
   }
   paginate(paginationString: string) {
-    console.log(paginationString);
     this.pexelService.getPaginatedImages(paginationString);
   }
 }
